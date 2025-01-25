@@ -28,14 +28,13 @@ public class DailyExpenses {
             addExpense(date, amount);
         }
         
-        // Display all expenses
         displayExpenses();
         
         scanner.close();
     }
 
     private static void addExpense(String date, double amount) {
-      Add or update the expense amount for the given date
+      
         if (expenses.containsKey(date)) {
             double existingAmount = expenses.get(date);
             expenses.put(date, existingAmount + amount);
@@ -45,7 +44,7 @@ public class DailyExpenses {
     }
 
     private static void displayExpenses() {
-       Display all stored expenses
+       
         System.out.println("Daily Expenses:");
         for (Map.Entry<String, Double> entry : expenses.entrySet()) {
             System.out.println("Date: " + entry.getKey() + ", Amount: " + entry.getValue());
